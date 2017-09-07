@@ -52,27 +52,44 @@ public class ViewClass extends RelativeLayout {
         arr.add(52);
         arr.add(22);
         arr.add(12);
+        arr.add(32);
+        arr.add(42);
+        arr.add(52);
+        arr.add(22);
         arr.add(12);
+        arr.add(32);
+        arr.add(42);
+        arr.add(52);
+        arr.add(22);
+        arr.add(12);
+        arr.add(32);
+        arr.add(42);
+        arr.add(52);
+        arr.add(22);
+        arr.add(12);
+        arr.add(32);
+        arr.add(42);
+        arr.add(52);
+        arr.add(22);
+        arr.add(12);
+        arr.add(32);
+        arr.add(42);
+        arr.add(52);
+        arr.add(22);
+        arr.add(12);
+        arr.add(32);
+        arr.add(42);
+        arr.add(52);
         arr.add(22);
         arr.add(12);
         arr.add(12);
-        arr.add(22);
         arr.add(12);
         arr.add(12);
-        arr.add(22);
         arr.add(12);
         arr.add(12);
-        arr.add(22);
-        arr.add(12);
-        arr.add(12);
-        arr.add(22);
-        arr.add(12);
-        arr.add(12);
-        arr.add(22);
-        arr.add(12);
-        arr.add(12);
+
         getWid();
-        int mainWidth = width / 5;
+        int mainWidth = width / 4;
         int firstViewWidth = width / 3;
         RelativeLayout relativeLayout;
         float mainLobsElevationsNumber = Float.valueOf(arr.size()) / 5;
@@ -80,31 +97,70 @@ public class ViewClass extends RelativeLayout {
             mainLobsElevationsNumber = (int) mainLobsElevationsNumber + 1;
         for (int y = 0; y < mainLobsElevationsNumber; y++) {
             relativeLayout = new RelativeLayout(context);
-            for (int x = 0; x < 5; x++) {
-                LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(mainWidth, mainWidth);
-                ImageView indicatorButton = new ImageView(context);
-
-                indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
-                layout.setMargins((int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context));
-                indicatorButton.setLayoutParams(layout);
-                relativeLayout.addView(indicatorButton);
-                 if (x % 5 != 0) {// after first view
-                 indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
-                }
-                indicatorButton.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Object c = view.getTag();
-                        Log.e("s", "S");
+            int numArraySize = arr.size();
+            int lastXSize =lastX;
+            int calc = numArraySize  - lastXSize;
+           if (calc > 5) {//type ONE
+                for (int x = 0; x < 5; x++) {
+                    ImageView indicatorButton = new ImageView(context);
+                    indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
+                    if (x % 5 != 0) {// after first view
+                        if (x == 1) {
+                            indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
+                            indicatorButton.setY(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
+                        } else if (x == 2) {
+                            indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
+                            indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * ((Math.abs(x - 1)) % 5)));
+                        } else if (x == 3) {
+                            indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
+                            indicatorButton.setX((((mainWidth + (int) Util.convertDpToPixel(1, context)) * 3)));
+                        } else if (x == 4) {
+                            indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
+                            indicatorButton.setX(((((mainWidth) + (int) Util.convertDpToPixel(1, context)) * 3)));
+                            indicatorButton.setY(((mainWidth + (int) Util.convertDpToPixel(1, context))));
+                        }
+                    } else {
+                        indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                     }
-                });
-                indicatorButton.setTag(lastX);
-                lastX ++;
-                Log.e("s", "S");
+                    relativeLayout.addView(indicatorButton);
+                    indicatorButton.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Object c = view.getTag();
+                            Log.e("Object", "Object");
+                        }
+                    });
+                    indicatorButton.setTag(lastX);
+                    lastX++;
+                }
+             } else {//type Regular
+                for (int x = 0; x < calc; x++) {
+                    ImageView indicatorButton = new ImageView(context);
+                    indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
+                    indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
+                    indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * ((Math.abs(x - 1)) % 5)));
+                    relativeLayout.addView(indicatorButton);
+                    indicatorButton.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Object c = view.getTag();
+                            Log.e("Object", "Object");
+                        }
+                    });
+                    indicatorButton.setTag(lastX);
+                    lastX++;
+                }
             }
             LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(width, mainWidth * 2);
+            layout.setMargins((int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), 0);
             mainLinearLayout.addView(relativeLayout, layout);
         }
+    }
+
+    private LinearLayout.LayoutParams params(int mainWidth, int minHigh) {
+        LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(mainWidth, minHigh);
+        layout.setMargins((int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context));
+        return layout;
     }
 
     private void getWid() {
