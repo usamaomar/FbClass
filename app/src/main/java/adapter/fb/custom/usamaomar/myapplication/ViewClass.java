@@ -4,6 +4,7 @@ package adapter.fb.custom.usamaomar.myapplication;
  * Created by usamaomar on 9/2/17.
  */
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ProviderInfo;
 import android.content.res.TypedArray;
@@ -21,6 +22,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.sackcentury.shinebuttonlib.ShineButton;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -44,6 +46,7 @@ public class ViewClass extends RelativeLayout {
     private int firstViewWidth;
     private RelativeLayout relativeLayout;
     private float mainLobsElevationsNumber;
+    private Activity activity;
 
     public ViewClass(Context context) {
         super(context);
@@ -57,9 +60,10 @@ public class ViewClass extends RelativeLayout {
     }
 
 
-    public void setArrayModel(ArrayList<MainModel> arrayList, onItemClick onItemClick) {
+    public void setArrayModel(ArrayList<MainModel> arrayList, Activity activity, onItemClick onItemClick) {
         this.arrayList = arrayList;
         this.onItemClick = onItemClick;
+        this.activity = activity;
         init();
     }
 
@@ -281,10 +285,10 @@ public class ViewClass extends RelativeLayout {
                 for (int x = 0; x < calc; x++) {
                     RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
                     indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
-                    if (x==2){
+                    if (x == 2) {
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
                         indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth)));
-                    }else {
+                    } else {
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
                     }
                     relativeLayout.addView(indicatorButton);
@@ -376,21 +380,87 @@ public class ViewClass extends RelativeLayout {
 
     public interface onItemClick {
         void clickedItem(MainModel mainModel, int position);
+
         void bottomItem();
     }
 
 
     private RelativeLayout myCustomView(MainModel mainModel) {
         RelativeLayout relativeLayout = new RelativeLayout(context);
-        LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        LayoutParams lps = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        LayoutParams imageViewParam = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        ////
+        LayoutParams shineButtonParamFirst = new RelativeLayout.LayoutParams((int)Util.convertDpToPixel(25,context), (int)Util.convertDpToPixel(24,context));
+        shineButtonParamFirst.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        shineButtonParamFirst.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        shineButtonParamFirst.addRule(RelativeLayout.LEFT_OF);//shine image
+        shineButtonParamFirst.setMargins(0,0,(int) Util.convertDpToPixel(0, context),(int) Util.convertDpToPixel(1, context));
+        ////
+//        LayoutParams shineButtonParamSec = new RelativeLayout.LayoutParams((int)Util.convertDpToPixel(25,context), (int)Util.convertDpToPixel(25,context));
+//        shineButtonParamSec.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+//        shineButtonParamSec.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+//        shineButtonParamSec.addRule(RelativeLayout.LEFT_OF);
+        ////
+        LayoutParams shineButtons = new RelativeLayout.LayoutParams((int)Util.convertDpToPixel(24,context), (int)Util.convertDpToPixel(24,context));
+        shineButtons.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        shineButtons.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        shineButtons.addRule(RelativeLayout.LEFT_OF);//regular image
+        ////
         ImageView imageView = new ImageView(context);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        TextView textView = new TextView(context);
-        textView.setText(String.format(Locale.getDefault(), "%s %s", mainModel.getName(), mainModel.getId()));
+        imageView.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
         Glide.with(context).load(mainModel.getImage()).crossFade().into(imageView);
-        relativeLayout.addView(textView, lps);
-        relativeLayout.addView(imageView, lp);
+        ////
+        final ImageView image = new ImageView(context);
+        image.setBackgroundResource(R.drawable.vector_like_empty);
+        ////
+        final ShineButton shineButton = new ShineButton(context);
+        shineButton.init(activity);
+        shineButton.enableFlashing(true);
+        shineButton.setAllowRandomColor(false);
+        shineButton.setBigShineColor(context.getResources().getColor(R.color.black));
+        //shineButton.setBtnColor(context.getResources().getColor(R.color.white));
+        //shineButton.setBtnFillColor(context.getResources().getColor(R.color.white));
+        shineButton.setClickAnimDuration(200);
+        shineButton.enableFlashing(false);
+        shineButton.setAnimDuration(1500);
+        shineButton.setShineCount(8);
+        shineButton.setShineTurnAngle(10);
+        shineButton.setShapeResource(R.raw.heart);
+        shineButton.setSmallShineColor(context.getResources().getColor(R.color.black));
+        shineButton.setSmallShineOffAngle(20);
+
+        shineButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                image.setVisibility(GONE);
+                shineButton.setBtnFillColor(context.getResources().getColor(R.color.white));
+                shineButton.setChecked(false);
+
+            }
+        });
+
+        ////
+//        ShineButton shineButtonSec = new ShineButton(context);
+//        shineButtonSec.init(activity);
+//        shineButtonSec.enableFlashing(true);
+//        shineButtonSec.setChecked(true);
+//        shineButtonSec.setAllowRandomColor(false);
+//        shineButtonSec.setBigShineColor(context.getResources().getColor(R.color.black));
+//        shineButtonSec.setBtnColor(context.getResources().getColor(R.color.white));
+//        shineButtonSec.setBtnFillColor(context.getResources().getColor(R.color.black));
+//        shineButtonSec.setClickAnimDuration(200);
+//        shineButtonSec.enableFlashing(false);
+//        shineButtonSec.setAnimDuration(1500);
+//        shineButtonSec.setShineCount(8);
+//        shineButtonSec.setShineTurnAngle(10);
+//        shineButtonSec.setShapeResource(R.raw.heart);
+//        shineButtonSec.setSmallShineColor(context.getResources().getColor(R.color.black));
+//        shineButtonSec.setSmallShineOffAngle(20);
+        ////
+        relativeLayout.addView(imageView, imageViewParam);
+        relativeLayout.addView(shineButton, shineButtonParamFirst);
+        //relativeLayout.addView(shineButtonSec, shineButtonParamSec);
+        relativeLayout.addView(image, shineButtons);
         return relativeLayout;
     }
 
