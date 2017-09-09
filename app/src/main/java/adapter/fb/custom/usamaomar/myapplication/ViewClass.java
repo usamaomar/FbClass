@@ -38,6 +38,12 @@ public class ViewClass extends RelativeLayout {
     int lastX = 0;
     private ArrayList<MainModel> arrayList;
     private onItemClick onItemClick;
+    private LinearLayout mainLinearLayout;
+    private ScrollViewExt rootScrollView;
+    private int mainWidth;
+    private int firstViewWidth;
+    private RelativeLayout relativeLayout;
+    private float mainLobsElevationsNumber;
 
     public ViewClass(Context context) {
         super(context);
@@ -60,15 +66,19 @@ public class ViewClass extends RelativeLayout {
 
     private void init() {
         View view = LayoutInflater.from(context).inflate(R.layout.activity_range_view, this);
-        LinearLayout mainLinearLayout = (LinearLayout) view.findViewById(R.id.mainLinearLayout);
-        ScrollViewExt rootScrollView = (ScrollViewExt) view.findViewById(R.id.rootScrollView);
+        mainLinearLayout = (LinearLayout) view.findViewById(R.id.mainLinearLayout);
+        rootScrollView = (ScrollViewExt) view.findViewById(R.id.rootScrollView);
         getWid();
-        int mainWidth = width / 4;
-        int firstViewWidth = width / 3;
-        RelativeLayout relativeLayout;
-        float mainLobsElevationsNumber = Float.valueOf(arrayList.size()) / 5;
+        mainWidth = width / 4;
+        firstViewWidth = width / 3;
+        mainLobsElevationsNumber = Float.valueOf(arrayList.size()) / 5;
         if (mainLobsElevationsNumber % 2 != 0)
             mainLobsElevationsNumber = (int) mainLobsElevationsNumber + 1;
+        addViews(arrayList);
+    }
+
+
+    private void addViews(final ArrayList<MainModel> arrayList) {
         for (int y = 1; y <= mainLobsElevationsNumber; y++) {
             int deRandomType = getRandomType();
             relativeLayout = new RelativeLayout(context);
@@ -79,9 +89,7 @@ public class ViewClass extends RelativeLayout {
                 //type ONE  1
                 if (deRandomType == 1) {
                     for (int x = 0; x < 5; x++) {
-                        // ImageView indicatorButton = new ImageView(context);
                         RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                         if (x % 5 != 0) {// after first view
                             if (x == 1) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
@@ -105,7 +113,7 @@ public class ViewClass extends RelativeLayout {
                             @Override
                             public void onClick(View view) {
                                 Object c = view.getTag();
-                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                             }
                         });
                         indicatorButton.setTag(lastX);
@@ -113,14 +121,11 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 2) {
                     for (int x = 0; x < 2; x++) {
-                        // ImageView indicatorButton = new ImageView(context);
                         RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
                         indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
                         if (x > 0) {
-                            indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                             indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
                         } else {
-                            indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryDark));
                             indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * 2));
                         }
                         relativeLayout.addView(indicatorButton);
@@ -128,7 +133,7 @@ public class ViewClass extends RelativeLayout {
                             @Override
                             public void onClick(View view) {
                                 Object c = view.getTag();
-                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                             }
                         });
                         indicatorButton.setTag(lastX);
@@ -136,9 +141,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 3) {
                     for (int x = 0; x < 4; x++) {
-                        // ImageView indicatorButton = new ImageView(context);
                         RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                         indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
                         relativeLayout.addView(indicatorButton);
@@ -146,7 +149,7 @@ public class ViewClass extends RelativeLayout {
                             @Override
                             public void onClick(View view) {
                                 Object c = view.getTag();
-                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                             }
                         });
                         indicatorButton.setTag(lastX);
@@ -154,17 +157,15 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 4) {
                     for (int x = 0; x < 1; x++) {
-                        // ImageView indicatorButton = new ImageView(context);
                         RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
                         indicatorButton.setLayoutParams(params((mainWidth * 4), (mainWidth * 2)));
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
                         relativeLayout.addView(indicatorButton);
                         indicatorButton.setOnClickListener(new OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Object c = view.getTag();
-                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                             }
                         });
                         indicatorButton.setTag(lastX);
@@ -172,9 +173,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 5) {
                     for (int x = 0; x < 5; x++) {
-                        // ImageView indicatorButton = new ImageView(context);
                         RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                         if (x % 5 != 0) {// after first view
                             if (x == 1) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
@@ -182,7 +181,7 @@ public class ViewClass extends RelativeLayout {
                                 indicatorButton.setX(((((mainWidth) + (int) Util.convertDpToPixel(1, context)) * 2)));
                             } else if (x == 2) {
                                 indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
-                               // indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * ((Math.abs(x - 1)) % 5)));
+                                // indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * ((Math.abs(x - 1)) % 5)));
                             } else if (x == 3) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                                 indicatorButton.setX((((mainWidth + (int) Util.convertDpToPixel(1, context)) * 3)));
@@ -200,30 +199,28 @@ public class ViewClass extends RelativeLayout {
                             @Override
                             public void onClick(View view) {
                                 Object c = view.getTag();
-                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                             }
                         });
                         indicatorButton.setTag(lastX);
                         lastX++;
                     }
-                }else if (deRandomType == 6) {
+                } else if (deRandomType == 6) {
                     for (int x = 0; x < 5; x++) {
-                        // ImageView indicatorButton = new ImageView(context);
                         RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                         if (x % 5 != 0) {// after first view
                             if (x == 1) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                                 indicatorButton.setY(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));//first second view
                             } else if (x == 2) {
                                 indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
-                                indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context))* 2));//big view
+                                indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * 2));//big view
                             } else if (x == 3) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
-                                indicatorButton.setX((((mainWidth + (int) Util.convertDpToPixel(1, context)) )));//last first view
+                                indicatorButton.setX((((mainWidth + (int) Util.convertDpToPixel(1, context)))));//last first view
                             } else if (x == 4) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
-                                indicatorButton.setX(((((mainWidth) + (int) Util.convertDpToPixel(1, context)) )));// last second view
+                                indicatorButton.setX(((((mainWidth) + (int) Util.convertDpToPixel(1, context)))));// last second view
                                 indicatorButton.setY(((mainWidth + (int) Util.convertDpToPixel(1, context))));
                             }
                         } else {
@@ -234,7 +231,7 @@ public class ViewClass extends RelativeLayout {
                             @Override
                             public void onClick(View view) {
                                 Object c = view.getTag();
-                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                                onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                             }
                         });
                         indicatorButton.setTag(lastX);
@@ -244,14 +241,11 @@ public class ViewClass extends RelativeLayout {
             } else if (calc == 2) {
                 //type Regular  2
                 for (int x = 0; x < calc; x++) {
-                    // ImageView indicatorButton = new ImageView(context);
                     RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
                     indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
                     if (x > 0) {
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
                     } else {
-                        indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryDark));
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * 2));
                     }
                     relativeLayout.addView(indicatorButton);
@@ -259,7 +253,46 @@ public class ViewClass extends RelativeLayout {
                         @Override
                         public void onClick(View view) {
                             Object c = view.getTag();
-                            onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                            onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
+                        }
+                    });
+                    indicatorButton.setTag(lastX);
+                    lastX++;
+                }
+            } else if (calc == 1) {
+                //type Regular  3
+                for (int x = 0; x < 1; x++) {
+                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                    indicatorButton.setLayoutParams(params((mainWidth * 4), (mainWidth * 2)));
+                    indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
+                    relativeLayout.addView(indicatorButton);
+                    indicatorButton.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Object c = view.getTag();
+                            onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
+                        }
+                    });
+                    indicatorButton.setTag(lastX);
+                    lastX++;
+                }
+            } else if (calc == 3) {
+                //type Regular  3
+                for (int x = 0; x < calc; x++) {
+                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                    indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
+                    if (x==2){
+                        indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
+                        indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth)));
+                    }else {
+                        indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
+                    }
+                    relativeLayout.addView(indicatorButton);
+                    indicatorButton.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Object c = view.getTag();
+                            onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                         }
                     });
                     indicatorButton.setTag(lastX);
@@ -268,9 +301,7 @@ public class ViewClass extends RelativeLayout {
             } else {
                 //type Regular  3
                 for (int x = 0; x < calc; x++) {
-                    // ImageView indicatorButton = new ImageView(context);
                     RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
-                    indicatorButton.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                     indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                     indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
                     relativeLayout.addView(indicatorButton);
@@ -278,7 +309,7 @@ public class ViewClass extends RelativeLayout {
                         @Override
                         public void onClick(View view) {
                             Object c = view.getTag();
-                            onItemClick.clickedItem(arrayList.get((Integer) view.getTag()));
+                            onItemClick.clickedItem(arrayList.get((Integer) view.getTag()), (Integer) view.getTag());
                         }
                     });
                     indicatorButton.setTag(lastX);
@@ -298,6 +329,10 @@ public class ViewClass extends RelativeLayout {
                 LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(width, mainWidth);
                 layout.setMargins((int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), 0);
                 mainLinearLayout.addView(relativeLayout, layout);
+            } else if (calc == 3 || calc == 4) {
+                LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(width, mainWidth);
+                layout.setMargins((int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), 0);
+                mainLinearLayout.addView(relativeLayout, layout);
             } else {
                 LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(width, mainWidth * 2);
                 layout.setMargins((int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), (int) Util.convertDpToPixel(1, context), 0);
@@ -311,17 +346,28 @@ public class ViewClass extends RelativeLayout {
             public void onScrollChanged(ScrollViewExt scrollView, int x, int y, int oldx, int oldy) {
                 View view = (View) scrollView.getChildAt(scrollView.getChildCount() - 1);
                 int diff = (view.getBottom() - (scrollView.getHeight() + scrollView.getScrollY()));
-
                 // if diff is zero, then the bottom has been reached
                 if (diff == 0) {
                     onItemClick.bottomItem();
                 }
             }
         });
+
+
     }
 
+
+    public void notifyArrayList(ArrayList<MainModel> arrayList) {
+        this.arrayList.addAll(arrayList);
+        mainLobsElevationsNumber = Float.valueOf(arrayList.size()) / 5;
+        if (mainLobsElevationsNumber % 2 != 0)
+            mainLobsElevationsNumber = (int) mainLobsElevationsNumber + 1;
+        addViews(this.arrayList);
+    }
+
+
     private int getRandomType() {
-        int[] numbers = {1,2,3,4,5,6};
+        int[] numbers = {1, 2, 3, 4, 5, 6};
         int max = numbers.length;
         int random = (int) (Math.random() * max);
         return numbers[random];
@@ -329,7 +375,7 @@ public class ViewClass extends RelativeLayout {
 
 
     public interface onItemClick {
-        void clickedItem(MainModel mainModel);
+        void clickedItem(MainModel mainModel, int position);
         void bottomItem();
     }
 
