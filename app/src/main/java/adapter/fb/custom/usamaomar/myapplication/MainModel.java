@@ -9,6 +9,7 @@ public class MainModel {
     private int id;
     private String name;
     private String image;
+    private boolean likeState;
 
 
     public int getId() {
@@ -33,5 +34,13 @@ public class MainModel {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public boolean isLikeState() {
+        return likeState;
+    }
+
+    public void setLikeState(boolean likeState) {
+        this.likeState = likeState;
     }
 }

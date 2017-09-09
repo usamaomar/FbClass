@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ProviderInfo;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -93,7 +94,7 @@ public class ViewClass extends RelativeLayout {
                 //type ONE  1
                 if (deRandomType == 1) {
                     for (int x = 0; x < 5; x++) {
-                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                         if (x % 5 != 0) {// after first view
                             if (x == 1) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
@@ -125,7 +126,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 2) {
                     for (int x = 0; x < 2; x++) {
-                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                         indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
                         if (x > 0) {
                             indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
@@ -145,7 +146,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 3) {
                     for (int x = 0; x < 4; x++) {
-                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                         indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
                         relativeLayout.addView(indicatorButton);
@@ -161,7 +162,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 4) {
                     for (int x = 0; x < 1; x++) {
-                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                         indicatorButton.setLayoutParams(params((mainWidth * 4), (mainWidth * 2)));
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
                         relativeLayout.addView(indicatorButton);
@@ -177,7 +178,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 5) {
                     for (int x = 0; x < 5; x++) {
-                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                         if (x % 5 != 0) {// after first view
                             if (x == 1) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
@@ -211,7 +212,7 @@ public class ViewClass extends RelativeLayout {
                     }
                 } else if (deRandomType == 6) {
                     for (int x = 0; x < 5; x++) {
-                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                        RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                         if (x % 5 != 0) {// after first view
                             if (x == 1) {
                                 indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
@@ -245,7 +246,7 @@ public class ViewClass extends RelativeLayout {
             } else if (calc == 2) {
                 //type Regular  2
                 for (int x = 0; x < calc; x++) {
-                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                     indicatorButton.setLayoutParams(params((mainWidth * 2), (mainWidth * 2)));
                     if (x > 0) {
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
@@ -266,7 +267,7 @@ public class ViewClass extends RelativeLayout {
             } else if (calc == 1) {
                 //type Regular  3
                 for (int x = 0; x < 1; x++) {
-                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                     indicatorButton.setLayoutParams(params((mainWidth * 4), (mainWidth * 2)));
                     indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (1) % 5));
                     relativeLayout.addView(indicatorButton);
@@ -283,7 +284,7 @@ public class ViewClass extends RelativeLayout {
             } else if (calc == 3) {
                 //type Regular  3
                 for (int x = 0; x < calc; x++) {
-                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                     indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                     if (x == 2) {
                         indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
@@ -305,7 +306,7 @@ public class ViewClass extends RelativeLayout {
             } else {
                 //type Regular  3
                 for (int x = 0; x < calc; x++) {
-                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX));
+                    RelativeLayout indicatorButton = myCustomView(arrayList.get(lastX), lastX);
                     indicatorButton.setLayoutParams(params(mainWidth, mainWidth));
                     indicatorButton.setX(((mainWidth + (int) Util.convertDpToPixel(1, context)) * (x % 5)));
                     relativeLayout.addView(indicatorButton);
@@ -385,81 +386,78 @@ public class ViewClass extends RelativeLayout {
     }
 
 
-    private RelativeLayout myCustomView(MainModel mainModel) {
+    private RelativeLayout myCustomView(final MainModel mainModel, final int position) {
         RelativeLayout relativeLayout = new RelativeLayout(context);
         LayoutParams imageViewParam = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         ////
-        LayoutParams shineButtonParamFirst = new RelativeLayout.LayoutParams((int)Util.convertDpToPixel(25,context), (int)Util.convertDpToPixel(24,context));
+        LayoutParams shineButtonParamFirst = new RelativeLayout.LayoutParams((int) Util.convertDpToPixel(25, context), (int) Util.convertDpToPixel(24, context));
         shineButtonParamFirst.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         shineButtonParamFirst.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         shineButtonParamFirst.addRule(RelativeLayout.LEFT_OF);//shine image
-        shineButtonParamFirst.setMargins(0,0,(int) Util.convertDpToPixel(0, context),(int) Util.convertDpToPixel(1, context));
+        shineButtonParamFirst.setMargins(0, 0, (int) Util.convertDpToPixel(0, context), (int) Util.convertDpToPixel(1, context));
         ////
-//        LayoutParams shineButtonParamSec = new RelativeLayout.LayoutParams((int)Util.convertDpToPixel(25,context), (int)Util.convertDpToPixel(25,context));
-//        shineButtonParamSec.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-//        shineButtonParamSec.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-//        shineButtonParamSec.addRule(RelativeLayout.LEFT_OF);
-        ////
-        LayoutParams shineButtons = new RelativeLayout.LayoutParams((int)Util.convertDpToPixel(24,context), (int)Util.convertDpToPixel(24,context));
+        LayoutParams shineButtons = new RelativeLayout.LayoutParams((int) Util.convertDpToPixel(24, context), (int) Util.convertDpToPixel(24, context));
         shineButtons.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         shineButtons.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         shineButtons.addRule(RelativeLayout.LEFT_OF);//regular image
         ////
         ImageView imageView = new ImageView(context);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
         Glide.with(context).load(mainModel.getImage()).crossFade().into(imageView);
         ////
         final ImageView image = new ImageView(context);
         image.setBackgroundResource(R.drawable.vector_like_empty);
         ////
+        final ImageView imageWhite = new ImageView(context);
+        imageWhite.setBackgroundResource(R.drawable.vector_like_empty);
+        ////
         final ShineButton shineButton = new ShineButton(context);
         shineButton.init(activity);
         shineButton.enableFlashing(true);
         shineButton.setAllowRandomColor(false);
-        shineButton.setBigShineColor(context.getResources().getColor(R.color.black));
-        //shineButton.setBtnColor(context.getResources().getColor(R.color.white));
-        //shineButton.setBtnFillColor(context.getResources().getColor(R.color.white));
+        shineButton.setBigShineColor(context.getResources().getColor(R.color.white));
         shineButton.setClickAnimDuration(200);
         shineButton.enableFlashing(false);
         shineButton.setAnimDuration(1500);
         shineButton.setShineCount(8);
         shineButton.setShineTurnAngle(10);
         shineButton.setShapeResource(R.raw.heart);
-        shineButton.setSmallShineColor(context.getResources().getColor(R.color.black));
+        shineButton.setSmallShineColor(context.getResources().getColor(R.color.white));
         shineButton.setSmallShineOffAngle(20);
 
-        shineButton.setOnClickListener(new OnClickListener() {
+//        if (mainModel.isLikeState()){
+//            image.setVisibility(GONE);
+//            shineButton.setBtnFillColor(context.getResources().getColor(R.color.white));
+//            shineButton.setChecked(true);
+//        }else {
+//            image.setVisibility(VISIBLE);
+//            shineButton.setBtnFillColor(context.getResources().getColor(R.color.trans));
+//            shineButton.setChecked(false);
+//        }
+
+        image.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                image.setVisibility(GONE);
-                shineButton.setBtnFillColor(context.getResources().getColor(R.color.white));
-                shineButton.setChecked(false);
-
+                if (!mainModel.isLikeState()) {//change to liked
+                    shineButton.performClick();
+                    mainModel.setLikeState(true);
+                    arrayList.set(position, mainModel);
+                    //shineButton.setBtnFillColor(Color.WHITE);
+                    shineButton.setChecked(true);
+                } else {
+                    shineButton.performClick();
+                    shineButton.performClick();
+                    mainModel.setLikeState(true);
+                    arrayList.set(position, mainModel);
+                    //shineButton.setBtnFillColor(context.getResources().getColor(R.color.black));
+                    shineButton.setChecked(false);
+                }
             }
         });
-
-        ////
-//        ShineButton shineButtonSec = new ShineButton(context);
-//        shineButtonSec.init(activity);
-//        shineButtonSec.enableFlashing(true);
-//        shineButtonSec.setChecked(true);
-//        shineButtonSec.setAllowRandomColor(false);
-//        shineButtonSec.setBigShineColor(context.getResources().getColor(R.color.black));
-//        shineButtonSec.setBtnColor(context.getResources().getColor(R.color.white));
-//        shineButtonSec.setBtnFillColor(context.getResources().getColor(R.color.black));
-//        shineButtonSec.setClickAnimDuration(200);
-//        shineButtonSec.enableFlashing(false);
-//        shineButtonSec.setAnimDuration(1500);
-//        shineButtonSec.setShineCount(8);
-//        shineButtonSec.setShineTurnAngle(10);
-//        shineButtonSec.setShapeResource(R.raw.heart);
-//        shineButtonSec.setSmallShineColor(context.getResources().getColor(R.color.black));
-//        shineButtonSec.setSmallShineOffAngle(20);
         ////
         relativeLayout.addView(imageView, imageViewParam);
         relativeLayout.addView(shineButton, shineButtonParamFirst);
-        //relativeLayout.addView(shineButtonSec, shineButtonParamSec);
+        relativeLayout.addView(imageWhite, shineButtonParamFirst);
         relativeLayout.addView(image, shineButtons);
         return relativeLayout;
     }
