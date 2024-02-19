@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-02-19T00:30:32.138Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="-dwkwjv0zBdnuh-erEBI" version="23.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-19T07:29:42.528Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="qcUIsFAHKZj4Pq-KaeZk" version="23.1.5" type="github">
   <diagram name="Page-1" id="03018318-947c-dd8e-b7a3-06fadd420f32">
-    <mxGraphModel dx="9036" dy="9230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="6885" dy="8000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1214,6 +1214,12 @@
         </mxCell>
         <mxCell id="7J0OFaZJxiVTn2UEDyg7-489" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.camera;" vertex="1" parent="1">
           <mxGeometry x="1490" y="-3870" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7J0OFaZJxiVTn2UEDyg7-491" value="Location" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-1840" y="-1340" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7J0OFaZJxiVTn2UEDyg7-492" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.map;" vertex="1" parent="1">
+          <mxGeometry x="-1730" y="-1345" width="80" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
