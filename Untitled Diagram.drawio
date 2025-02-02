@@ -1,9 +1,383 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.10">
   <diagram name="Page-1" id="EPk0n2BYyluvB1Ao36vr">
-    <mxGraphModel>
+    <mxGraphModel dx="1793" dy="2081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-1" target="Dy9efZ61UUuieJ9qr2ny-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="284.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-2" value="login by google" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="190" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-3" value="login by apple" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="280" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-4" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-420" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="-370.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-5" value="Add new car" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="-380" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-6" value="Banner" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-320" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-11" value="if admin" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="254.99999999999977" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.573;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="584.5999999999999" y="568.44" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.548;entryY=0.992;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-11" target="Dy9efZ61UUuieJ9qr2ny-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-14" value="the most searched cars" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-280" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-15" value="recommended cars for you" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-240" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-16" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="570" width="220" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-17" value="Filter car" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="610" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-18" value="Banner" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="650" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-19" value="the most searched cars" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="690" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-20" value="recommended cars for you" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="730" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="-370.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-21" value="Filter car" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-380" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-27" value="Filter car" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="150" y="-470" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-28" value="Cars Category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-200" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-29" value="Cars Category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="770" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-30" value="Brand" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-420" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-31" value="car model" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-390" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-32" value="car category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-360" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-33" value="Body type" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-330" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-34" value="Interior Color" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-305" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-35" value="Regional Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-280" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-36" value="Condition" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-253" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-37" value="Transporter Type" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-225" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-38" value="Fuel Type" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-200" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-39" value="Interior Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-170" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-40" value="Number of Seats" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-140" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-41" value="Exterior Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-110" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-42" value="Technical Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-80" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-43" value="Customs" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-50" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-44" value="License" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-20" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-45" value="Insurance" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="10" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-48" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="-420" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-50" value="Add Cars Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="-380" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-51" value="Image 1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="-340" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-55" value="Image 2" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="920" y="-340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-56" value="Image 3" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="920" y="-285" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-57" value="Image 4" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="920" y="-230" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-58" value="Image 5" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="-230" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-59" value="Image 6" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="-230" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-61" value="Next" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="810" y="-110" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-62" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="-425" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-72" value="Next" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="-115" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-74" value="Search for a Brand" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-390" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-75" value="Toyota" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-350" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-76" value="BMW" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-325" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-77" value="Mercedes" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-300" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-79" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="-350" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-80" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="-325" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-81" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#3333FF;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="-300" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-82" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="-430" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-83" value="Next" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="-120" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-84" value="Search for a Car Model" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="-395" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-85" value="Category 1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="-355" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-86" value="Category 2" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="-330" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-87" value="Category 3" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="-305" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-88" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1710" y="-355" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-89" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1710" y="-330" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-90" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#dae8fc;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#3333FF;" vertex="1" parent="1">
+          <mxGeometry x="1710" y="-305" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.007;entryY=0.51;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-62" target="Dy9efZ61UUuieJ9qr2ny-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-101" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="-430" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-102" value="Add Car" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="-120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-103" value="Search for a Car Category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="-395" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-104" value="X5 class" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="-355" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-105" value="X6 class" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="-330" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-106" value="X7 class" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="-305" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-107" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="-355" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-108" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="-330" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-109" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="-305" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.004;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-82" target="Dy9efZ61UUuieJ9qr2ny-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-111" value="Add More specification" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="-120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-113" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="-430" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-114" value="Add 360 Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="-390" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-115" value="Image 1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="-350" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-121" value="Continue" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="-120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.526;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-48" target="Dy9efZ61UUuieJ9qr2ny-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.042;entryY=0.488;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-113" target="Dy9efZ61UUuieJ9qr2ny-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-124" value="Next" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="-120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-125" value="Main" style="whiteSpace=wrap;html=1;align=center;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="500" y="883" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-126" value="Search" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="542" y="883" width="48" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-127" value="Favourite" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="590" y="883" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-128" value="Settings" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="883" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-139" value="Brand" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="600" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-140" value="car model" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="630" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-141" value="car category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="660" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-142" value="Body type" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="690" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-143" value="Interior Color" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="715" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-144" value="Regional Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="740" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-145" value="Condition" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="767" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-146" value="Transporter Type" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="795" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-147" value="Fuel Type" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="820" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-148" value="Interior Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="850" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-149" value="Number of Seats" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="880" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-150" value="Exterior Specifications" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="910" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-155" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="820" y="560" width="220" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-156" value="Main" style="whiteSpace=wrap;html=1;align=center;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="873" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-157" value="Search" style="whiteSpace=wrap;html=1;align=center;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="872" y="873" width="48" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-158" value="Favourite" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="920" y="873" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-159" value="Settings" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="980" y="873" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.009;entryY=0.523;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-16" target="Dy9efZ61UUuieJ9qr2ny-155">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-161" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="550" width="220" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-162" value="Car Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="588" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-163" value="Car Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="615" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-164" value="Car Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="672" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-165" value="Car Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="700" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-166" value="Car Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="756" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-167" value="Main" style="whiteSpace=wrap;html=1;align=center;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="863" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-168" value="Search" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="863" width="48" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-169" value="Favourite" style="whiteSpace=wrap;html=1;align=center;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="863" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-170" value="Settings" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="863" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-171" value="Car Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="785" width="90" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-172" value="Main" style="whiteSpace=wrap;html=1;align=center;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="863" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-173" value="Search" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="863" width="48" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-174" value="Favourite" style="whiteSpace=wrap;html=1;align=center;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="863" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-175" value="Settings" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="863" width="50" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
