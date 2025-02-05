@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.10">
   <diagram name="Page-1" id="EPk0n2BYyluvB1Ao36vr">
-    <mxGraphModel dx="1593" dy="1972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2585" dy="2467" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -447,16 +447,16 @@
           <mxGeometry x="905" y="-443" width="200" height="390" as="geometry" />
         </mxCell>
         <mxCell id="Dy9efZ61UUuieJ9qr2ny-225" value="Add New Car" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="915" y="-403" width="180" height="30" as="geometry" />
+          <mxGeometry x="912.5" y="-123" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Dy9efZ61UUuieJ9qr2ny-226" value="Car Info" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="915" y="-363" width="175" height="63" as="geometry" />
+          <mxGeometry x="917.5" y="-363" width="175" height="63" as="geometry" />
         </mxCell>
         <mxCell id="Dy9efZ61UUuieJ9qr2ny-233" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.editIcon;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="-360" width="20" height="20" as="geometry" />
+          <mxGeometry x="1072.5" y="-360" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Dy9efZ61UUuieJ9qr2ny-235" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#cccccc;fillColor2=#000000;strokeColor=#ffffff;sketch=0;" vertex="1" parent="1">
-          <mxGeometry x="1072.5" y="-323" width="15" height="15" as="geometry" />
+          <mxGeometry x="1075" y="-323" width="15" height="15" as="geometry" />
         </mxCell>
         <mxCell id="Dy9efZ61UUuieJ9qr2ny-236" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
           <mxGeometry x="915" y="15" width="220" height="390" as="geometry" />
@@ -486,6 +486,9 @@
         </mxCell>
         <mxCell id="Dy9efZ61UUuieJ9qr2ny-242" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.17;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dy9efZ61UUuieJ9qr2ny-225" target="Dy9efZ61UUuieJ9qr2ny-48">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dy9efZ61UUuieJ9qr2ny-243" value="Filter By Brand" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="917.5" y="-403" width="180" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
